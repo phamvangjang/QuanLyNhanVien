@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNV", "QLNV\QLNV.csproj", "{908CAE29-FAFE-4BE2-B8BB-45C769E39B29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNVEntityFramwork", "QLNVEntityFramwork\QLNVEntityFramwork.csproj", "{9EC307F1-F9DB-463F-ADB8-3E5BFD78EC47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{908CAE29-FAFE-4BE2-B8BB-45C769E39B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908CAE29-FAFE-4BE2-B8BB-45C769E39B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908CAE29-FAFE-4BE2-B8BB-45C769E39B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908CAE29-FAFE-4BE2-B8BB-45C769E39B29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EC307F1-F9DB-463F-ADB8-3E5BFD78EC47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EC307F1-F9DB-463F-ADB8-3E5BFD78EC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EC307F1-F9DB-463F-ADB8-3E5BFD78EC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EC307F1-F9DB-463F-ADB8-3E5BFD78EC47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC61BCDC-2830-43E9-819D-37475017674D}
+	EndGlobalSection
+EndGlobal

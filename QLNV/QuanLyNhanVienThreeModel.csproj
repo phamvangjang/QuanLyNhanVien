@@ -68,8 +68,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Employee.cs" />
-    <Compile Include="Model\EmSale.cs" />
-    <Compile Include="Model\EmShip.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

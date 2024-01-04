@@ -80,11 +80,14 @@
     <Compile Include="NhanVien.cs">
       <DependentUpon>DB_QuanLyNhanVien.tt</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\QLNVEntityFramwork.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\QLNVEntityFramwork.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -98,9 +101,23 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DB_QuanLyNhanVien.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="bin\Debug\QLNVEntityFramwork.exe.config" />
     <None Include="DB_QuanLyNhanVien.edmx.diagram">
       <DependentUpon>DB_QuanLyNhanVien.edmx</DependentUpon>
     </None>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\DB_QuanLyNhanVien.csdl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\DB_QuanLyNhanVien.msl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\DB_QuanLyNhanVien.ssdl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\NhanVien.csdl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\NhanVien.msl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\NhanVien.ssdl" />
+    <None Include="obj\Debug\QLNVEntityFramwork.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\QLNVEntityFramwork.csproj.CopyComplete" />
+    <None Include="obj\Debug\QLNVEntityFramwork.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\QLNVEntityFramwork.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\QuanLyNhanVienEntityFramwork.csproj.AssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -119,6 +136,12 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\QLNVEntityFramwork.exe" />
+    <Content Include="bin\Debug\QLNVEntityFramwork.pdb" />
     <Content Include="DB_QuanLyNhanVien.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DB_QuanLyNhanVien.edmx</DependentUpon>
@@ -129,6 +152,18 @@
       <DependentUpon>DB_QuanLyNhanVien.edmx</DependentUpon>
       <LastGenOutput>DB_QuanLyNhanVien.cs</LastGenOutput>
     </Content>
+    <Content Include="obj\Debug\QLNVEntityFramwork.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\QLNVEntityFramwork.exe" />
+    <Content Include="obj\Debug\QLNVEntityFramwork.pdb" />
+    <Content Include="obj\Debug\TempPE\DB_QuanLyNhanVien.Context.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DB_QuanLyNhanVien.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DB_QuanLyNhanVien.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\NhanVien.Context.cs.dll" />
+    <Content Include="obj\Debug\TempPE\NhanVien.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\NhanVien1.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

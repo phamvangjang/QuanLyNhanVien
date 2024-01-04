@@ -11,15 +11,11 @@ namespace QLNV.Model
         public string ID {  get; set; }
         public string Name { get; set; }
         public string Gender { get; set; }
-        public string phoneNumber {  get; set; }
-        public DateTime NgayVaoLam { get; set; }
-        public int ThamNien()
-        {
-            return DateTime.Now.Year - NgayVaoLam.Year;
-        }
-        public double Salary()
-        {
-            return 7000000;
-        }
+        public string Phone {  get; set; }
+        public DateTime NVL { get; set; }
+        public float Sale { get; set; }
+        public float Delivery { get; set; }
+        public float Salary {  get; set; }
+        public string Type {  get; set; }
     }
 }

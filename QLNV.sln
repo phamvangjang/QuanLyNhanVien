@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNV", "QLNV\QLNV.csproj", "{908CAE29-FAFE-4BE2-B8BB-45C769E39B29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyNhanVienThreeModel", "QLNV\QuanLyNhanVienThreeModel.csproj", "{908CAE29-FAFE-4BE2-B8BB-45C769E39B29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNVEntityFramwork", "QLNVEntityFramwork\QLNVEntityFramwork.csproj", "{9EC307F1-F9DB-463F-ADB8-3E5BFD78EC47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyNhanVienEntityFramwork", "QLNVEntityFramwork\QuanLyNhanVienEntityFramwork.csproj", "{9EC307F1-F9DB-463F-ADB8-3E5BFD78EC47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resource", "Resource", "{EE57CBE8-8DB9-4F2B-8497-F205704548EA}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\vangi\Desktop\db_QLNV.png = C:\Users\vangi\Desktop\db_QLNV.png
+		..\test2(tt).png = ..\test2(tt).png
+		..\test2(ttt).png = ..\test2(ttt).png
+		..\Test2.png = ..\Test2.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

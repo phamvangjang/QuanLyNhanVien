@@ -44,19 +44,17 @@
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Gender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NgayVL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Salary = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtDoanhSo = new System.Windows.Forms.TextBox();
-            this.lblDoanhthu = new System.Windows.Forms.Label();
-            this.txtNL = new System.Windows.Forms.TextBox();
-            this.lblPCNL = new System.Windows.Forms.Label();
+            this.txtSale = new System.Windows.Forms.TextBox();
+            this.lblSale = new System.Windows.Forms.Label();
+            this.txtDelivery = new System.Windows.Forms.TextBox();
+            this.lblDelivery = new System.Windows.Forms.Label();
             this.gbLNV = new System.Windows.Forms.GroupBox();
-            this.rdoNVGN = new System.Windows.Forms.RadioButton();
-            this.rdoNVBH = new System.Windows.Forms.RadioButton();
+            this.rdbtnDelivery = new System.Windows.Forms.RadioButton();
+            this.rdbtnSale = new System.Windows.Forms.RadioButton();
             this.gb_GT = new System.Windows.Forms.GroupBox();
-            this.rdoNu = new System.Windows.Forms.RadioButton();
-            this.rdoNam = new System.Windows.Forms.RadioButton();
+            this.rdbtnNu = new System.Windows.Forms.RadioButton();
+            this.rdbtnNam = new System.Windows.Forms.RadioButton();
             this.lblGT = new System.Windows.Forms.Label();
             this.gbTTNV = new System.Windows.Forms.GroupBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -74,47 +72,52 @@
             // 
             // btnThongke
             // 
+            this.btnThongke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnThongke.Location = new System.Drawing.Point(25, 290);
             this.btnThongke.Name = "btnThongke";
             this.btnThongke.Size = new System.Drawing.Size(153, 34);
             this.btnThongke.TabIndex = 5;
             this.btnThongke.Text = "Thống kê";
-            this.btnThongke.UseVisualStyleBackColor = true;
+            this.btnThongke.UseVisualStyleBackColor = false;
             this.btnThongke.Click += new System.EventHandler(this.btnThongke_Click);
             // 
             // btnSua
             // 
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnSua.Location = new System.Drawing.Point(25, 189);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(153, 34);
             this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnXoa.Location = new System.Drawing.Point(25, 136);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(153, 34);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
+            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnLuu.Location = new System.Drawing.Point(26, 89);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(153, 34);
             this.btnLuu.TabIndex = 1;
             this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // lblLoaiNV
             // 
             this.lblLoaiNV.AutoSize = true;
-            this.lblLoaiNV.Location = new System.Drawing.Point(11, 273);
+            this.lblLoaiNV.Location = new System.Drawing.Point(11, 280);
             this.lblLoaiNV.Name = "lblLoaiNV";
             this.lblLoaiNV.Size = new System.Drawing.Size(145, 25);
             this.lblLoaiNV.TabIndex = 10;
@@ -123,7 +126,7 @@
             // dtNVL
             // 
             this.dtNVL.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNVL.Location = new System.Drawing.Point(161, 221);
+            this.dtNVL.Location = new System.Drawing.Point(161, 226);
             this.dtNVL.Name = "dtNVL";
             this.dtNVL.Size = new System.Drawing.Size(309, 30);
             this.dtNVL.TabIndex = 9;
@@ -131,7 +134,7 @@
             // lblNVL
             // 
             this.lblNVL.AutoSize = true;
-            this.lblNVL.Location = new System.Drawing.Point(11, 225);
+            this.lblNVL.Location = new System.Drawing.Point(11, 230);
             this.lblNVL.Name = "lblNVL";
             this.lblNVL.Size = new System.Drawing.Size(137, 25);
             this.lblNVL.TabIndex = 8;
@@ -139,9 +142,9 @@
             // 
             // txtDT
             // 
-            this.txtDT.Location = new System.Drawing.Point(117, 177);
+            this.txtDT.Location = new System.Drawing.Point(160, 177);
             this.txtDT.Name = "txtDT";
-            this.txtDT.Size = new System.Drawing.Size(354, 30);
+            this.txtDT.Size = new System.Drawing.Size(311, 30);
             this.txtDT.TabIndex = 7;
             // 
             // lblDT
@@ -155,31 +158,33 @@
             // 
             // btnSapXep
             // 
+            this.btnSapXep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnSapXep.Location = new System.Drawing.Point(25, 237);
             this.btnSapXep.Name = "btnSapXep";
             this.btnSapXep.Size = new System.Drawing.Size(153, 34);
             this.btnSapXep.TabIndex = 4;
             this.btnSapXep.Text = "Sắp xếp";
-            this.btnSapXep.UseVisualStyleBackColor = true;
+            this.btnSapXep.UseVisualStyleBackColor = false;
             this.btnSapXep.Click += new System.EventHandler(this.btnSapXep_Click);
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnThem.Location = new System.Drawing.Point(26, 36);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(153, 34);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // gbDSNV
             // 
             this.gbDSNV.Controls.Add(this.lvDSNV);
             this.gbDSNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDSNV.Location = new System.Drawing.Point(97, 438);
+            this.gbDSNV.Location = new System.Drawing.Point(97, 472);
             this.gbDSNV.Name = "gbDSNV";
-            this.gbDSNV.Size = new System.Drawing.Size(696, 306);
+            this.gbDSNV.Size = new System.Drawing.Size(696, 263);
             this.gbDSNV.TabIndex = 7;
             this.gbDSNV.TabStop = false;
             this.gbDSNV.Text = "Danh sách nhân viên";
@@ -190,14 +195,13 @@
             this.ID,
             this.Name,
             this.Gender,
-            this.Phone,
-            this.NgayVL,
-            this.Salary});
+            this.NgayVL});
+            this.lvDSNV.FullRowSelect = true;
             this.lvDSNV.GridLines = true;
             this.lvDSNV.HideSelection = false;
             this.lvDSNV.Location = new System.Drawing.Point(14, 33);
             this.lvDSNV.Name = "lvDSNV";
-            this.lvDSNV.Size = new System.Drawing.Size(671, 263);
+            this.lvDSNV.Size = new System.Drawing.Size(671, 210);
             this.lvDSNV.TabIndex = 0;
             this.lvDSNV.UseCompatibleStateImageBehavior = false;
             this.lvDSNV.View = System.Windows.Forms.View.Details;
@@ -206,7 +210,7 @@
             // ID
             // 
             this.ID.Text = "Ma NV";
-            this.ID.Width = 80;
+            this.ID.Width = 100;
             // 
             // Name
             // 
@@ -216,120 +220,110 @@
             // Gender
             // 
             this.Gender.Text = "Giới tính";
-            this.Gender.Width = 100;
-            // 
-            // Phone
-            // 
-            this.Phone.Text = "Số ĐT";
-            this.Phone.Width = 100;
+            this.Gender.Width = 120;
             // 
             // NgayVL
             // 
             this.NgayVL.Text = "Ngày Vào làm";
-            this.NgayVL.Width = 160;
+            this.NgayVL.Width = 200;
             // 
-            // Salary
+            // txtSale
             // 
-            this.Salary.Text = "Lương";
-            this.Salary.Width = 120;
+            this.txtSale.Location = new System.Drawing.Point(160, 328);
+            this.txtSale.Name = "txtSale";
+            this.txtSale.Size = new System.Drawing.Size(310, 30);
+            this.txtSale.TabIndex = 15;
             // 
-            // txtDoanhSo
+            // lblSale
             // 
-            this.txtDoanhSo.Location = new System.Drawing.Point(160, 317);
-            this.txtDoanhSo.Name = "txtDoanhSo";
-            this.txtDoanhSo.Size = new System.Drawing.Size(310, 30);
-            this.txtDoanhSo.TabIndex = 15;
+            this.lblSale.AutoSize = true;
+            this.lblSale.Location = new System.Drawing.Point(10, 333);
+            this.lblSale.Name = "lblSale";
+            this.lblSale.Size = new System.Drawing.Size(135, 25);
+            this.lblSale.TabIndex = 14;
+            this.lblSale.Text = "PC Doanh số:";
             // 
-            // lblDoanhthu
+            // txtDelivery
             // 
-            this.lblDoanhthu.AutoSize = true;
-            this.lblDoanhthu.Location = new System.Drawing.Point(10, 322);
-            this.lblDoanhthu.Name = "lblDoanhthu";
-            this.lblDoanhthu.Size = new System.Drawing.Size(135, 25);
-            this.lblDoanhthu.TabIndex = 14;
-            this.lblDoanhthu.Text = "PC Doanh số:";
+            this.txtDelivery.Location = new System.Drawing.Point(161, 371);
+            this.txtDelivery.Name = "txtDelivery";
+            this.txtDelivery.Size = new System.Drawing.Size(310, 30);
+            this.txtDelivery.TabIndex = 13;
             // 
-            // txtNL
+            // lblDelivery
             // 
-            this.txtNL.Location = new System.Drawing.Point(161, 313);
-            this.txtNL.Name = "txtNL";
-            this.txtNL.Size = new System.Drawing.Size(310, 30);
-            this.txtNL.TabIndex = 13;
-            // 
-            // lblPCNL
-            // 
-            this.lblPCNL.AutoSize = true;
-            this.lblPCNL.Location = new System.Drawing.Point(11, 318);
-            this.lblPCNL.Name = "lblPCNL";
-            this.lblPCNL.Size = new System.Drawing.Size(137, 25);
-            this.lblPCNL.TabIndex = 12;
-            this.lblPCNL.Text = "PC Nhiên liệu:";
+            this.lblDelivery.AutoSize = true;
+            this.lblDelivery.Location = new System.Drawing.Point(11, 376);
+            this.lblDelivery.Name = "lblDelivery";
+            this.lblDelivery.Size = new System.Drawing.Size(137, 25);
+            this.lblDelivery.TabIndex = 12;
+            this.lblDelivery.Text = "PC Nhiên liệu:";
             // 
             // gbLNV
             // 
-            this.gbLNV.Controls.Add(this.rdoNVGN);
-            this.gbLNV.Controls.Add(this.rdoNVBH);
-            this.gbLNV.Location = new System.Drawing.Point(162, 251);
+            this.gbLNV.Controls.Add(this.rdbtnDelivery);
+            this.gbLNV.Controls.Add(this.rdbtnSale);
+            this.gbLNV.Location = new System.Drawing.Point(162, 258);
             this.gbLNV.Name = "gbLNV";
             this.gbLNV.Size = new System.Drawing.Size(309, 60);
             this.gbLNV.TabIndex = 11;
             this.gbLNV.TabStop = false;
             // 
-            // rdoNVGN
+            // rdbtnDelivery
             // 
-            this.rdoNVGN.AutoSize = true;
-            this.rdoNVGN.Location = new System.Drawing.Point(154, 20);
-            this.rdoNVGN.Name = "rdoNVGN";
-            this.rdoNVGN.Size = new System.Drawing.Size(123, 29);
-            this.rdoNVGN.TabIndex = 1;
-            this.rdoNVGN.Text = "Giao nhận";
-            this.rdoNVGN.UseVisualStyleBackColor = true;
-            this.rdoNVGN.CheckedChanged += new System.EventHandler(this.rdoNVGN_CheckedChanged);
+            this.rdbtnDelivery.AutoSize = true;
+            this.rdbtnDelivery.Location = new System.Drawing.Point(154, 20);
+            this.rdbtnDelivery.Name = "rdbtnDelivery";
+            this.rdbtnDelivery.Size = new System.Drawing.Size(123, 29);
+            this.rdbtnDelivery.TabIndex = 1;
+            this.rdbtnDelivery.Text = "Giao nhận";
+            this.rdbtnDelivery.UseVisualStyleBackColor = true;
+            this.rdbtnDelivery.CheckedChanged += new System.EventHandler(this.rdoNVGN_CheckedChanged);
             // 
-            // rdoNVBH
+            // rdbtnSale
             // 
-            this.rdoNVBH.AutoSize = true;
-            this.rdoNVBH.Checked = true;
-            this.rdoNVBH.Location = new System.Drawing.Point(16, 20);
-            this.rdoNVBH.Name = "rdoNVBH";
-            this.rdoNVBH.Size = new System.Drawing.Size(117, 29);
-            this.rdoNVBH.TabIndex = 0;
-            this.rdoNVBH.TabStop = true;
-            this.rdoNVBH.Text = "Bán hàng";
-            this.rdoNVBH.UseVisualStyleBackColor = true;
-            this.rdoNVBH.CheckedChanged += new System.EventHandler(this.rdoNVBH_CheckedChanged);
+            this.rdbtnSale.AutoSize = true;
+            this.rdbtnSale.Checked = true;
+            this.rdbtnSale.Location = new System.Drawing.Point(16, 20);
+            this.rdbtnSale.Name = "rdbtnSale";
+            this.rdbtnSale.Size = new System.Drawing.Size(117, 29);
+            this.rdbtnSale.TabIndex = 0;
+            this.rdbtnSale.TabStop = true;
+            this.rdbtnSale.Text = "Bán hàng";
+            this.rdbtnSale.UseVisualStyleBackColor = true;
+            this.rdbtnSale.CheckedChanged += new System.EventHandler(this.rdoNVBH_CheckedChanged);
             // 
             // gb_GT
             // 
-            this.gb_GT.Controls.Add(this.rdoNu);
-            this.gb_GT.Controls.Add(this.rdoNam);
-            this.gb_GT.Location = new System.Drawing.Point(100, 111);
+            this.gb_GT.Controls.Add(this.rdbtnNu);
+            this.gb_GT.Controls.Add(this.rdbtnNam);
+            this.gb_GT.Location = new System.Drawing.Point(160, 111);
             this.gb_GT.Name = "gb_GT";
-            this.gb_GT.Size = new System.Drawing.Size(371, 60);
+            this.gb_GT.Size = new System.Drawing.Size(311, 60);
             this.gb_GT.TabIndex = 5;
             this.gb_GT.TabStop = false;
             // 
-            // rdoNu
+            // rdbtnNu
             // 
-            this.rdoNu.AutoSize = true;
-            this.rdoNu.Location = new System.Drawing.Point(145, 20);
-            this.rdoNu.Name = "rdoNu";
-            this.rdoNu.Size = new System.Drawing.Size(58, 29);
-            this.rdoNu.TabIndex = 1;
-            this.rdoNu.Text = "Nữ";
-            this.rdoNu.UseVisualStyleBackColor = true;
+            this.rdbtnNu.AutoSize = true;
+            this.rdbtnNu.Location = new System.Drawing.Point(176, 20);
+            this.rdbtnNu.Name = "rdbtnNu";
+            this.rdbtnNu.Size = new System.Drawing.Size(58, 29);
+            this.rdbtnNu.TabIndex = 1;
+            this.rdbtnNu.Text = "Nữ";
+            this.rdbtnNu.UseVisualStyleBackColor = true;
             // 
-            // rdoNam
+            // rdbtnNam
             // 
-            this.rdoNam.AutoSize = true;
-            this.rdoNam.Checked = true;
-            this.rdoNam.Location = new System.Drawing.Point(17, 21);
-            this.rdoNam.Name = "rdoNam";
-            this.rdoNam.Size = new System.Drawing.Size(74, 29);
-            this.rdoNam.TabIndex = 0;
-            this.rdoNam.TabStop = true;
-            this.rdoNam.Text = "Nam";
-            this.rdoNam.UseVisualStyleBackColor = true;
+            this.rdbtnNam.AutoSize = true;
+            this.rdbtnNam.Checked = true;
+            this.rdbtnNam.Location = new System.Drawing.Point(48, 21);
+            this.rdbtnNam.Name = "rdbtnNam";
+            this.rdbtnNam.Size = new System.Drawing.Size(74, 29);
+            this.rdbtnNam.TabIndex = 0;
+            this.rdbtnNam.TabStop = true;
+            this.rdbtnNam.Text = "Nam";
+            this.rdbtnNam.UseVisualStyleBackColor = true;
             // 
             // lblGT
             // 
@@ -342,10 +336,10 @@
             // 
             // gbTTNV
             // 
-            this.gbTTNV.Controls.Add(this.txtDoanhSo);
-            this.gbTTNV.Controls.Add(this.lblDoanhthu);
-            this.gbTTNV.Controls.Add(this.txtNL);
-            this.gbTTNV.Controls.Add(this.lblPCNL);
+            this.gbTTNV.Controls.Add(this.txtSale);
+            this.gbTTNV.Controls.Add(this.lblSale);
+            this.gbTTNV.Controls.Add(this.txtDelivery);
+            this.gbTTNV.Controls.Add(this.lblDelivery);
             this.gbTTNV.Controls.Add(this.gbLNV);
             this.gbTTNV.Controls.Add(this.lblLoaiNV);
             this.gbTTNV.Controls.Add(this.dtNVL);
@@ -362,16 +356,16 @@
             this.gbTTNV.ForeColor = System.Drawing.Color.Black;
             this.gbTTNV.Location = new System.Drawing.Point(93, 49);
             this.gbTTNV.Name = "gbTTNV";
-            this.gbTTNV.Size = new System.Drawing.Size(490, 383);
+            this.gbTTNV.Size = new System.Drawing.Size(490, 417);
             this.gbTTNV.TabIndex = 5;
             this.gbTTNV.TabStop = false;
             this.gbTTNV.Text = "Thông tin nhân viên";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(100, 75);
+            this.txtName.Location = new System.Drawing.Point(162, 75);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(371, 30);
+            this.txtName.Size = new System.Drawing.Size(309, 30);
             this.txtName.TabIndex = 3;
             // 
             // label2
@@ -385,9 +379,9 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(100, 29);
+            this.txtID.Location = new System.Drawing.Point(162, 29);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(371, 30);
+            this.txtID.Size = new System.Drawing.Size(309, 30);
             this.txtID.TabIndex = 1;
             // 
             // lbl_ID
@@ -410,7 +404,7 @@
             this.gbTacVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTacVu.Location = new System.Drawing.Point(591, 49);
             this.gbTacVu.Name = "gbTacVu";
-            this.gbTacVu.Size = new System.Drawing.Size(203, 383);
+            this.gbTacVu.Size = new System.Drawing.Size(203, 417);
             this.gbTacVu.TabIndex = 6;
             this.gbTacVu.TabStop = false;
             this.gbTacVu.Text = "Tác vụ:";
@@ -429,6 +423,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(885, 746);
             this.Controls.Add(this.gbDSNV);
             this.Controls.Add(this.gbTTNV);
@@ -436,7 +431,6 @@
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            //this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -472,19 +466,17 @@
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Name;
         private System.Windows.Forms.ColumnHeader Gender;
-        private System.Windows.Forms.ColumnHeader Phone;
         private System.Windows.Forms.ColumnHeader NgayVL;
-        private System.Windows.Forms.ColumnHeader Salary;
-        private System.Windows.Forms.TextBox txtDoanhSo;
-        private System.Windows.Forms.Label lblDoanhthu;
-        private System.Windows.Forms.TextBox txtNL;
-        private System.Windows.Forms.Label lblPCNL;
+        private System.Windows.Forms.TextBox txtSale;
+        private System.Windows.Forms.Label lblSale;
+        private System.Windows.Forms.TextBox txtDelivery;
+        private System.Windows.Forms.Label lblDelivery;
         private System.Windows.Forms.GroupBox gbLNV;
-        private System.Windows.Forms.RadioButton rdoNVGN;
-        private System.Windows.Forms.RadioButton rdoNVBH;
+        private System.Windows.Forms.RadioButton rdbtnDelivery;
+        private System.Windows.Forms.RadioButton rdbtnSale;
         private System.Windows.Forms.GroupBox gb_GT;
-        private System.Windows.Forms.RadioButton rdoNu;
-        private System.Windows.Forms.RadioButton rdoNam;
+        private System.Windows.Forms.RadioButton rdbtnNu;
+        private System.Windows.Forms.RadioButton rdbtnNam;
         private System.Windows.Forms.Label lblGT;
         private System.Windows.Forms.GroupBox gbTTNV;
         private System.Windows.Forms.TextBox txtName;

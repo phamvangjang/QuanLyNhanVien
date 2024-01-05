@@ -22,5 +22,6 @@ namespace QLNVEntityFramwork
         public Nullable<double> DoanhSo { get; set; }
         public Nullable<double> NhienLieu { get; set; }
         public Nullable<double> Luong { get; set; }
+        public string LoaiNV { get; set; }
     }
 }

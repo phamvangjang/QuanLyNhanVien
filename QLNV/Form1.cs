@@ -28,9 +28,9 @@ namespace QLNV
             {
                 txtDelivery.Visible = false;
                 lblDelivery.Visible = false;
+                txtSale.Clear();
                 txtSale.Visible = true;
                 lblSale.Visible = true;
-                txtSale.Clear();
             }
         }
 
@@ -202,6 +202,27 @@ namespace QLNV
                     txtDelivery.Text = employee.Delivery.ToString();
                 }
             }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (Validate)
+            {
+                Business.Instance.Sua(lvDSNV);
+                lvDSNV.Items.Clear();
+                Business.Instance.Xem(lvDSNV);
+            }
+        }
+
+        private void btnSapXep_Click(object sender, EventArgs e)
+        {
+            lvDSNV.Items.Clear();
+            Business.Instance.SapXepNhanVien(lvDSNV);
+        }
+
+        private void btnThongke_Click(object sender, EventArgs e)
+        {
+            Business.Instance.ThongKe();
         }
     }
 }

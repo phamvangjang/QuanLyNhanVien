@@ -314,6 +314,7 @@ namespace QLNV
             this.btnThongke.TabIndex = 5;
             this.btnThongke.Text = "Thống kê";
             this.btnThongke.UseVisualStyleBackColor = false;
+            this.btnThongke.Click += new System.EventHandler(this.btnThongke_Click);
             // 
             // btnSapXep
             // 
@@ -324,6 +325,7 @@ namespace QLNV
             this.btnSapXep.TabIndex = 4;
             this.btnSapXep.Text = "Sắp xếp";
             this.btnSapXep.UseVisualStyleBackColor = false;
+            this.btnSapXep.Click += new System.EventHandler(this.btnSapXep_Click);
             // 
             // btnSua
             // 
@@ -334,6 +336,7 @@ namespace QLNV
             this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -429,7 +432,6 @@ namespace QLNV
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);

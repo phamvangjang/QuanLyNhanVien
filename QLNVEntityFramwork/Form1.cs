@@ -164,24 +164,8 @@ namespace QLNVEntityFramwork
                     _db.NhanViens.Add(new NhanVien() { MaNV = txtID.Text, HoTen = txtName.Text, GioiTinh = rdbtnNam.Checked ? "Nam" : "Nữ", Dienthoai = txtDT.Text, NgayVL = dtNVL.Value, LoaiNV = rdbtnSale.Checked ? "sale" : "delivery", DoanhSo = s, NhienLieu = d, Luong = sa });
                     _db.SaveChanges();
 
-                    //show to listview
-                    ListViewItem listViewItem = new ListViewItem(txtID.Text);
-                    listViewItem.SubItems.Add(txtName.Text);
-                    listViewItem.SubItems.Add(rdbtnNam.Checked ? "Nam" : "Nữ");
-                    listViewItem.SubItems.Add(dtNVL.Value.ToString("dd/MM/yyyy"));
-
-                    //hight light tn
-                    TimeSpan thamnien = DateTime.Now - DateTime.Parse(dtNVL.Value.ToString());
-                    int thamNienNgay = (int)thamnien.TotalDays;
-                    int tn = thamNienNgay / 365;
-                    if (tn > 5)
-                    {
-                        listViewItem.BackColor = Color.LightGoldenrodYellow;
-                    }
-                    lvDSNV.Items.Add(listViewItem);
-                    listViewItem.Selected = true;
+                    ResetListView(_db.NhanViens.ToList());
                     MessageBox.Show("Đã thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    Reset();
                 }
             }
         }
@@ -301,11 +285,11 @@ namespace QLNVEntityFramwork
                     nhanVien.Luong = sa;
                     nhanVien.LoaiNV = rdbtnSale.Checked ? "sale" : "delivery";
                     _db.SaveChanges();
-                    txtID.Enabled = true;
+
                     ResetListView(_db.NhanViens.ToList());
-                    Reset();
                     MessageBox.Show("Đã sửa nhân vien thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 }
+                lvDSNV.Items[index].Selected = true;
             }
             else
             {

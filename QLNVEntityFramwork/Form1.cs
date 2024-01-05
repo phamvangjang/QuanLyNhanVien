@@ -27,6 +27,12 @@ namespace QLNVEntityFramwork
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Reset();
+            ResetListView(_db.NhanViens.ToList());
+        }
+
         private void rdoNVBH_CheckedChanged(object sender, EventArgs e)
         {
             if (rdbtnSale.Checked)
@@ -49,12 +55,6 @@ namespace QLNVEntityFramwork
                 txtSale.Visible = false;
                 lblSale.Visible = false;
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            Reset();
-            ResetListView(_db.NhanViens.ToList());
         }
 
         private void Reset()
@@ -104,7 +104,7 @@ namespace QLNVEntityFramwork
             Reset();
         }
 
-        private new bool validate
+        private bool validate
         {
             get
             {

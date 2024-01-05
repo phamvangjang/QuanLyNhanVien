@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLNV.Model
@@ -61,11 +58,12 @@ namespace QLNV.Model
                     gt = "Nữ";
                 }
                 //show to listview
-                string ngayvl = form1.dtNVL.Value.ToString("dd/MM/yyyy");
+                string ngayvl = form1.dtNVL.Value.ToString();
                 ListViewItem listViewItem = new ListViewItem(form1.txtID.Text);
                 listViewItem.SubItems.Add(form1.txtName.Text);
                 listViewItem.SubItems.Add(gt);
                 listViewItem.SubItems.Add(ngayvl);
+
                 TimeSpan thamnien = DateTime.Now - DateTime.Parse(ngayvl);
                 int thamNienNgay = (int)thamnien.TotalDays;
                 int tn = thamNienNgay / 365;
@@ -80,27 +78,27 @@ namespace QLNV.Model
                 //save info form object
                 float s = 0, d = 0, sa = 0;
                 employee.ID = form1.txtID.Text;
-                employee.Name= form1.txtName.Text;
-                employee.Gender= gt;
-                employee.Phone= form1.txtPhone.Text;
+                employee.Name = form1.txtName.Text;
+                employee.Gender = gt;
+                employee.Phone = form1.txtPhone.Text;
                 employee.NVL = DateTime.Parse(ngayvl);
 
                 if (form1.rdbtnSale.Checked)
                 {
-                    employee.Type= "sale";
-                    s= float.Parse(form1.txtSale.Text)*(float)0.1;
-                    sa = 7000000 + s;
+                    employee.Type = "sale";
+                    s = float.Parse(form1.txtSale.Text);
+                    sa = 7000000 + s * (float)0.1;
                 }
-                else 
+                else
                 {
                     employee.Type = "delivery";
                     d = float.Parse(form1.txtDelivery.Text);
-                    sa = 7000000 + s;
+                    sa = 7000000 + d;
                 }
 
                 employee.Sale = s;
                 employee.Delivery = d;
-                employee.Salary=sa;
+                employee.Salary = sa;
 
                 DAO.Instance.Luu(employee);
                 MessageBox.Show("Đã thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -143,17 +141,17 @@ namespace QLNV.Model
                     float s = 0, d = 0, sa = 0;
                     string nvlam = form1.dtNVL.Value.ToShortDateString();
                     employee.Name = form1.txtName.Text;
-                    employee.Gender = form1.rdbtnNam.Checked? "Nam" : "Nữ";
+                    employee.Gender = form1.rdbtnNam.Checked ? "Nam" : "Nữ";
                     employee.Phone = form1.txtPhone.Text;
                     employee.NVL = DateTime.Parse(nvlam);
                     if (form1.rdbtnSale.Checked)
                     {
-                        s = float.Parse(form1.txtSale.Text)*(float)0.1;
-                        sa = 7000000 + s;
+                        s = float.Parse(form1.txtSale.Text);
+                        sa = 7000000 + s*(float)0.1;
                         employee.Type = "sale";
 
                     }
-                    else 
+                    else
                     {
                         d = float.Parse(form1.txtDelivery.Text);
                         sa = 7000000 + d;
@@ -200,17 +198,17 @@ namespace QLNV.Model
         {
             DataTable dataTable = DAO.Instance.ThongKe();
             DataRow dataRow1 = dataTable.Rows[0];
-            int  slnvdeli = dataRow1.Field<int>("SoNhanVien");
+            int slnvdeli = dataRow1.Field<int>("SoNhanVien");
             double lcgh = dataRow1.Field<double>("TongLuongChiDeli");
 
             DataRow dataRow2 = dataTable.Rows[1];
             int slnvsale = dataRow2.Field<int>("SoNhanVien");
             double lcdt = dataRow2.Field<double>("TongLuongChiSale");
 
-            MessageBox.Show("Số lượng nhân viên sale: " + slnvsale + " (nv)\n" +
-                            "Lương chi nhân viên sale: " + lcdt + " VND\n" +
-                            "Số lượng nhân viên delivery: " + slnvdeli + " (nv)\n" +
-                            "Lương chi nhân viên delivery: " + lcgh + " VND",
+            MessageBox.Show("Số nhân viên BH: " + slnvsale + " (nv)\n" +
+                            $"Lương chi nhân viên BH: {lcdt:#,#}" + " VND\n\n\n" +
+                            "Số nhân viên GH: " + slnvdeli + " (nv)\n" +
+                            $"Lương chi nhân viên GH:  {lcgh:#,#}" + " VND",
                             "Thống kê", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
